@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  li{
+    list-style: none;
+  }
+  a{
+    text-decoration: none;
+    color: black;
+  }
+  
+  /* Style the header */
+  header {
+    padding: 10px;
+    font-size: 1em;
+    color: white;
+  }
+  header ul {
+    padding-left: 0px;
+  }
+  header h1{
+    font-size: 1.2em;
+    display: inline;
+    padding-right: 60px;
+    font-family:Palatino, URW Palladio L, serif;
+  }
+  
+  /*nav bar css*/
+  
+.nav_bar{
+      font-family: cursive;
+    color: black;
+}
+.nav_bar li{
+    display: inline;
+    justify-content: space-between;
+    padding: 10px;
+    color: black;
+}
+
+.nav_bar a:hover {
+	color:#009;
+}
+
+  /*end of nav bar css*/
+
+  /* Create two columns/boxes that floats next to each other */
+  nav {
+    float: left;
+    width: 20%;
+    height: 100%; /* only for demonstration, should be removed */
+    padding: 20px;
+  }
+  
+  .profile{
+    border-radius: 50%;
+    margin: 30px 0px 30px 0px;
+    vertical-align: middle;
+    height: auto;
+    width: 70%;
+}
+.text_name{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.text_des {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1em;
+  padding-bottom: 20px;
+}
+#text_links li{
+  padding-top:15px;
+}
+
+
+  /* Style the list inside the menu */
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  
+  article {
+    position: relative;
+    float: left;
+    padding: 20px;
+    width: 80%;
+    
+    height: 100%;
+  }
+
+  .quote{
+    margin: 0px 0px 30px 0px;
+  }
+.quote h3{
+  padding-top:10px;
+  font-family: Brush Script MT, Brush Script Std, cursive;
+  font-size: 1.5em;
+}
+  /* Clear floats after the columns */
+  section::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Style the footer */
+  footer {
+    
+    padding: 10px;
+    text-align: right;
+  }
+  
+  /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+  @media (max-width: 600px) {
+    article {
+      width: 100%;
+      height: auto;
+      padding: 0px 40px;
+      margin: 0px;;
+    }
+    #text_links {
+      display: none;
+    }
+    nav{
+      width: 100%;
+      height: auto;
+    }
+    .centered {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+    .profile{
+      width: 10%;
+      margin-right: 10px;
+    }
+
+    h2{
+      font-size: 1em;
+    }
+    .text_des{
+      font-size: 0.8em;
+    }
+    .container{
+      padding-top: 20px;
+      width: 80%;
+      padding-left:0px;
+      margin-left:0px;
+    }
+    .quote{
+      margin: 20px 0px 30px 0px;
+    }
+
+  }
+  
+ 

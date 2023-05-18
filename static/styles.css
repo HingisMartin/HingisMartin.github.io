@@ -1,0 +1,9 @@
+body {
+    background-color:white;
+    margin:0 auto;
+}
+#nav_bar li{
+    list-style: none;
+    display:inline;
+    padding: 20px;
+}
