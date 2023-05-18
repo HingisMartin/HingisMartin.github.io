@@ -10,7 +10,7 @@ db = sq(app)
 
 @app.route("/")
 def main_page():
-    return render_template("templates/index.html",date=datetime.date.today().year)
+    return render_template("index.html",date=datetime.date.today().year)
 
 class Images(db.Model):
     id= db.Column(db.Integer,primary_key=True)
