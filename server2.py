@@ -10,7 +10,7 @@ db = sq(app)
 
 @app.route("/")
 def main_page():
-    return render_template("index.html",date=datetime.date.today().year)
+    return render_template("./templates/index.html",date=datetime.date.today().year)
 
 class Images(db.Model):
     id= db.Column(db.Integer,primary_key=True)
@@ -21,7 +21,7 @@ with app.app_context():
     db.create_all()
 
 def table_setup():
-    file_path = "static/images/title.txt"
+    file_path = "./static/images/title.txt"
     title = []
     with open(file_path, 'r') as file:
         for line in file:
@@ -40,15 +40,15 @@ def table_setup():
 @app.route("/myGallery")
 def photo_page():
     all_images= db.session.query(Images).all()
-    return render_template("photo_gallery.html",date=datetime.date.today().year,images=all_images)
+    return render_template("./templates/photo_gallery.html",date=datetime.date.today().year,images=all_images)
 
 @app.route("/nav")
 def nav():
-    return render_template("nav_bar.html",date=datetime.date.today().year)
+    return render_template("./templates/nav_bar.html",date=datetime.date.today().year)
 
 @app.route("/blog")
 def blog():
-    return render_template("blog.html",date=datetime.date.today().year)
+    return render_template("./templates/blog.html",date=datetime.date.today().year)
 
 if __name__ == "__main__":
     app.run(debug=True)
