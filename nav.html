@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/navBar.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    
+</head>
+<body>
+    <header>
+        <div>
+            <ul class="nav_bar">
+                <li class="active"><a href="/"><h1>Hingis Martin Nadar</h1></a></li>
+                <li><a href="myGallery">My Photo Gallery</a></li>
+                <li><a>My CV</a></li>
+            </ul>   
+        </div>
+    </header>
+    <section>
+        <nav>
+            <div class="centered">
+                <img class="profile" src="https://media.licdn.com/dms/image/D4D03AQGhFZaOJbMA7A/profile-displayphoto-shrink_400_400/0/1673378551297?e=1689206400&v=beta&t=3f_nvOjqaV09SXkpeoSWTALUDQhJoL9M7PRn35Ppfc0" width="10%">
+                <div class="container">
+                    <p class="text_name"><h2 >Hingis Martin</h2></p>
+                    <p class="text_des">Masters in computer Science at Purdue | System Engineer in TCS</p>                     
+                </div>   
+            </div>
+            <div id="text_links">
+                <ul >
+                    <li><a href="https://www.linkedin.com/in/hingis-martin-a9a491149/"><i class="fa">&#xf08c; Linkedin</i></a></li>
+                    <li><a href="https://github.com/HingisMartin"><i class="fa">&#xf09b; Github</i></a></li>
+                    <li><a href=""><i class="fa">&#xf099;Twitter</i></a></li>
+                    <li><a href=mailto:"hingismartin0208@gmail.com"><i class="fa">&#xf0e0; Email</i></a></li>
+                </ul>
+            </div>
+        </nav>
+        <article>
+            {% block content %}{% endblock %}
+        </article>
+    </section>
+    <footer>
+        &copy; {{date}}. Built by Hingis Nadar at the JM AGRO
+    </footer> 
+</body>
+</html>
