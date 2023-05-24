@@ -15,6 +15,11 @@
   }
   
   /* Style the header */
+  img.logo {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
   header {
     padding: 10px;
     font-size: 1em;
@@ -23,9 +28,7 @@
   header ul {
     padding-left: 0px;
   }
-  .logo{
-    vertical-align: middle;
-  }
+  
   header h1{
     display: inline;
     padding-right: 60px;
