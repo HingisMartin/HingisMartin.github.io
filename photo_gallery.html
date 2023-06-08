@@ -14,7 +14,7 @@
         <h1>Photo Gallery</h1>
         <div class="gallery">
             {% for img in images%}
-                <img src="../static/images/{{img.file_name}}" alt="{{img.file_name}}">
+                <img src="/static/images/{{img.file_name}}" alt="{{img.file_name}}">
             {% endfor %}
         </div>
     </div>
