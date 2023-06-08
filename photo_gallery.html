@@ -6,15 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/photoStyles.css">
     <title>Photo Gallery HM</title>
+    <script>
+        function loadHTML(url, elementId) {
+          var xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+              document.getElementById(elementId).innerHTML = this.responseText;
+            }
+          };
+          xhttp.open("GET", url, true);
+          xhttp.send();
+        }
+      </script>
 </head>
-<body>
-    {% extends "nav_bar.html" %}
-    {% block content %}
+
+<body onload="loadHTML('index.html', 'nav_element')">
+    <div id="nav_element"></div>
     <div class="quote">
         <h1>Photo Gallery</h1>
         <div class="gallery">
             {% for img in images%}
-                <img src="/static/images/{{img.file_name}}" alt="{{img.file_name}}">
+                <img src="../static/images/{{img.file_name}}" alt="{{img.file_name}}">
             {% endfor %}
         </div>
     </div>
