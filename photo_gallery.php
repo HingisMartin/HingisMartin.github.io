@@ -21,15 +21,21 @@
 </head>
 
 <body onload="loadHTML('index.html', 'nav_element')">
-    <div id="nav_element"></div>
-    <div class="quote">
-        <h1>Photo Gallery</h1>
-        <div class="gallery">
-            {% for img in images%}
-                <img src="../static/images/{{img.file_name}}" alt="{{img.file_name}}">
-            {% endfor %}
+    <div id="nav_element">
+        <div class="quote">
+            <h1>Photo Gallery</h1>
+            <div class="gallery">
+            <?php
+                $folderpath='';
+                $file= scandir($folderpath);
+                foreach($file as $img){
+                    if($img !='.' && $img!='..'){
+                        echo "img src = $img >";
+                    }
+                }
+            ?>
+            </div>
         </div>
     </div>
-    {% endblock %}
 </body>
 </html>
