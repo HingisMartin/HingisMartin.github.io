@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/photoStyles.css">
+    <title>Photo Gallery HM</title>
+    <script>
+        function loadHTML(url, elementId) {
+          var xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+              document.getElementById(elementId).innerHTML = this.responseText;
+            }
+          };
+          xhttp.open("GET", url, true);
+          xhttp.send();
+        }
+      </script>
+</head>
+
+<body onload="loadHTML('index.html', 'nav_element')">
+    <div id="nav_element">
+        <div class="quote">
+            <h1>Photo Gallery</h1>
+            <div class="gallery">
+            <img src="/static/images/HM_0" alt="{{img.file_name}}"/>
+            <img src="/static/images/HM_1" alt="{{img.file_name}}"/>
+            <img src="/static/images/HM_2" alt="{{img.file_name}}"/>
+            <img src="/static/images/HM_3" alt="{{img.file_name}}"/>
+            <img src="/static/images/HM_4" alt="{{img.file_name}}"/>
+            <img src="/static/images/HM_5" alt="{{img.file_name}}"/>
+            <img src="/static/images/HM_6" alt="{{img.file_name}}"/>
+            <img src="/static/images/HM_7" alt="{{img.file_name}}"/>
+            <img src="/static/images/HM_8" alt="{{img.file_name}}"/>
+            <img src="/static/images/HM_9" alt="{{img.file_name}}"/>
+            <img src="/static/images/HM_10" alt="{{img.file_name}}"/>
+            <img src="/static/images/HM_11" alt="{{img.file_name}}"/>
+            <img src="/static/images/HM_12" alt="{{img.file_name}}"/>
+            <img src="/static/images/HM_13" alt="{{img.file_name}}"/>
+            <img src="/static/images/HM_14" alt="{{img.file_name}}"/>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
