@@ -13,7 +13,7 @@
     <header>
         <div>
             <ul class="nav_bar">
-                <li class="active"><a href="nav_bar.html"><h1>Hingis Martin Nadar</h1></a></li>
+                <li class="active"><a href="index.html"><img class="logo" width="60px" src="/static/logo.png"><h1 >Hingis Martin Nadar</h1></a></li>
                 <li><a href="photo_gallery.html">My Photo Gallery</a></li>
                 <li><a href="cv.html">My CV</a></li>
             </ul>   
@@ -39,7 +39,7 @@
         </nav>
         <article>
           <p><h1>MY CV</h1></p>
-          <iframe src="resume.pdf" width="800" height="600"></iframe> 
+          <iframe src="Resume.pdf" width="800" height="600"></iframe> 
         </article>
     </section>
     <footer>
@@ -47,27 +47,3 @@
     </footer> 
 </body>
 </html>
-<!DOCTYPE html>
-<html>
-<head>
-  <title>MY RESUME</title>
-  <script>
-    
-    function loadHTML(url, elementId) {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-                document.getElementById(elementId).innerHTML = this.responseText;
-            }
-        };
-        xhttp.open("GET", url, true);
-        xhttp.send();
-    }
-  </script>
-</head>
-<body onload="loadHTML('index.html', 'nav_element')">
-  <div id="nav_element">
-    <iframe src="resume.pdf" width="800" height="600"></iframe> 
-  </div>
-</body>
-</html
